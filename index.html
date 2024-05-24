@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="icon" href="img/back-quran.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Quraan App</title>
+</head>
+<body>
+<!-- preload -->
+<div class="preload">
+    <img src="img/b91e1131ca20f6369aa68d21cb3a8960.gif" alt="">
+</div>
+<!-- start hide -->
+<div class="all">
+<div class="hide">
+    <!-- start header -->
+    <div class="header">
+        <div class="container">
+            <ul class="links some-ar">
+                <li><a class="active" href="#suwar">السور</a></li>
+                <li><a href="#moaqet">مواقيت الصلاة</a></li>
+                <li><a href="#sabah">اذكار الصباح</a></li>
+                <li><a href="#masaa">اذكار المساء</a></li>
+                <li><a href="#tsabe7">تسابيح</a></li>
+            </ul>
+            <i class="fa-solid fa-list list"></i>
+            <a href="#" class="logo">Quran.net</a>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- start radio -->
+    <div class="info_quran">
+        <div class="container">
+                <span class="radio some-ar"> تشغيل الراديو <i class="fa-regular fa-circle-play play"></i></span>
+                <span class="text">القرآن الكريم</span>
+                <audio src="https://stream.radiojar.com/8s5u5tpdtwzuv" id="song"></audio>
+        </div>
+    </div>
+    <!-- end radio -->
+    <!-- start main -->
+    <div class="main">
+        <div class="container">
+            <div class="info">
+                <div class="moon_image">
+                    <img src="img/icons8-crescent-moon-50.png" alt="moonLogo">
+                </div>
+                <span class="text some-ar"> كل <span>عام</span> وأنتم بخير ! رمضان مبارك</span>
+            </div>
+            <div class="suwar" id="suwar">
+                <span class="name some-ar">السور</span>
+                <i class="fa-solid fa-arrow-down down"></i>
+            </div>
+            <div class="ayahs"></div>
+        </div>
+    </div>
+    <!-- end main -->
+    <!-- start date  -->
+    <div class="date" id="moaqet">
+        <div class="container">
+            <div class="text">
+                <i class="fa-solid fa-arrow-left left"></i>
+                <span class="name some-ar">مواقيت الصلاة</span>
+            </div>
+            <div class="moaqet"></div>
+        </div>
+    </div>
+    <!-- end date  -->
+    <!-- start azkar -->
+    <div class="azkar">
+        <div class="container">
+            <div class="text">
+                <i class="fa-solid fa-arrow-left left"></i>
+                <span class="name some-ar" id="sabah"> أذكار الصباح</span>
+            </div>
+            <div class="info_content"></div>
+            <div class="text masaa">
+                <i class="fa-solid fa-arrow-left left"></i>
+                <span class="name some-ar" id="masaa"> أذكار المساء</span>
+            </div>
+            <div class="info_content zkr_content"></div>
+            <div class="text adaya">
+                <i class="fa-solid fa-arrow-left left"></i>
+                <span class="name some-ar" id="tsabe7"> تسابيح </span>
+            </div>
+            <div class="info_content zkr_doaa"></div>
+        </div>
+    </div>
+    <!-- end azkar -->
+
+    <!-- start footer -->
+    <div class="footer">
+        <div class="container">
+            <span>© Copyright: <span class="update"><a href="https://www.facebook.com/profile.php?id=100067178573868" target="_blank">Osama Saif</a></span> <span id="currentYear"></span></span>
+        </div>
+    </div>
+    <!-- end footer -->
+</div>
+<!-- end hide -->
+
+
+<!-- start adds -->
+<div class="adds">
+    <div class="overlay-active2">
+        <div class="show_tafasel"></div>
+    </div>
+    <div class="change_reciters">
+        <div class="nav">
+            <div class="text">
+                <h2 class="some-ar text_seng">الاعدادات</h2>
+                <i class="fa-solid fa-x x_close"></i>
+            </div>
+            <div class="box_the_change">
+                <span class="change some-ar">تغيير الشيخ</span>
+                <div class="content">
+                    <select name="" id="" class="selector">
+                        <option value="" data-index="51"></option>
+                        <option value="" data-index="112"></option>
+                        <option value="" data-index="102"></option>
+                        <option value="" data-index="54"></option>
+                        <option value="" data-index="123"></option>
+                        <option value="" data-index="118"></option>
+                        <option value="" data-index="92"></option>
+                        <option value="" data-index="86"></option>
+                    </select>
+
+                </div>
+                <div class="change_size">
+                    <span class="some-ar">تغيير حجم الخط</span>
+                    <div class="content_size">
+                        <span class="update some-ar">تغيير</span>
+                        <input type="number">
+                    </div>
+                    <span class="text_size some-ar">القيمة الطبيعية <span class="num">18px</span></span>
+                    <span class="text_size some-ar">القيمة المستخدمة <span class="num used">18px</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="warning">
+            <h2>...Oops</h2>
+            <div class="content">
+                <span class="some-ar"> الحدالاقصى <span class="num">60px</span></span>            
+                <span class="some-ar"> الحد الادنى <span class="num">18px</span></span> 
+            </div>
+            <button class="ok">Ok</button>
+        </div>
+    </div>
+    <!-- start header -->
+    <div class="header">
+        <div class="container">
+            <span class="logo">Quran.net</span>
+            <i class="fa-solid fa-gear settings"></i>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- star content -->
+    <div class="content">
+        <div class="container">
+            <div class="start_info">
+                <h2 class="title"></h2>
+                <div class="info_content">
+                    <span class="load some-ar">تشغيل الصوت <i class="fa-regular fa-circle-play play"></i></span>
+                    <span class="tafasel some-ar"> تفاصيل السورة <i class="fa-solid fa-circle-info"></i></span>
+                </div>
+            </div>
+
+            <div class="ayah_text"></div>
+            <audio src="" class="play_quran" controls autoplay></audio>
+        </div>
+    </div>
+    <!-- end content -->
+    <!-- start footer -->
+    <div class="footer end">
+        <div class="container">
+            <div class="up">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <div class="whatssapp">
+                <a href="https://wa.me/201090215294" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <span>© Copyright: <span class="update"><a href="https://www.facebook.com/profile.php?id=100067178573868">Osama Saif</a></span> <span id="currentYear"></span></span>
+        </div>
+    </div>
+    <!-- end footer -->
+</div>
+</div>
+<!-- end adds -->
+    <script src="main.js"></script>
+</body>
+</html>

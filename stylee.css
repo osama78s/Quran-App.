@@ -1,0 +1,1022 @@
+/* start global rules */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.some-ar{
+    font-family: "Cairo", sans-serif ;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 767px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 991px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1070px;
+    }
+}
+:root{
+    --gray-color: #6c757d;
+    --gray-dark-color: #1f2125;
+    --blue-color: #055160;
+}
+.preload{
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* display: block; */
+}
+.preload img{
+    width: 980px; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar{
+    background-color: var(--gray-dark-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(52, 58, 64);
+    height: 80px;
+}
+.no-scroll{
+    overflow: hidden;
+}
+/* start header */
+.all{
+    display: none;
+}
+.hide .header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
+    z-index: 1000000000;
+}
+.hide .header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.hide .header .container::before{
+    content: '';
+    position: absolute;
+    right: 15px;
+    bottom: -21px;
+    background-color: #ccc;
+    width: calc(100% - 30px);
+    height: 1px;
+}
+.hide .header .container .links{
+    display: flex;
+    align-items: center;
+}
+.hide .header .container .links li{
+    margin-left: 20px;
+}
+.hide .header .container .links li a{
+    color: #fff;
+    position: relative;
+}
+.hide .header .container .links li a.active,
+.hide .header .container .links li a:hover{
+    color: #58dfe6;
+}
+.header{
+    background-color: var(--gray-dark-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
+    color: #fff;
+    padding: 20px 0;
+}
+.header .container .logo{
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-size: 20px;
+    text-align: left;
+    cursor: pointer;
+    color: #fff;
+}
+.header .container .image img{
+    width: 50px;
+    max-width: 100%;
+}
+/* end header */
+/* start inf quran */
+.info_quran{
+    transform: translateY(69px);
+    height: 320px;
+    background-color: var(--gray-dark-color);
+}
+.info_quran .container{
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+}
+.info_quran .container span{
+    color: white;
+    display: block;
+}
+.info_quran .container span.text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Noto Nastaliq Urdu", serif;
+}
+.info_quran .container span.radio{
+    background-color: var(--blue-color);
+    border-radius: 4px;
+    width: fit-content;
+    margin-left: auto;
+    transform: translateY(60px);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.info_quran .container span.radio .play,
+.info_quran .container span.radio .stop{
+    padding-right: 10px;
+    margin-top: 3px;
+}
+/* end inf quran */
+/* start main */
+.main{
+    background-color: var(--gray-dark-color);
+}
+.main .container{
+    padding: 70px 15px;
+    position: relative;
+}
+.hide .header  .container .btn_settings{
+    cursor: pointer;
+    color: #f6f6f6;
+    font-size: 25px;
+}
+.main .container .info{
+    background-color: #343a40;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.main .container .info .moon_image img{
+    width: 25px;
+    color: white;
+    margin-left: 10px;
+    transform: translatey(5px);
+}
+.main .container .info .text{
+    color: white;
+    font-size: 20px;
+}
+.main .container .info .text span{
+    color: #2ca4ab;
+}
+.main .container .suwar{
+    padding-top: 50px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .container .suwar .name{
+    color: rgb(44, 164, 171);
+    font-size: 20px;
+    font-weight: bold;
+}
+.main .container .suwar .down{
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    animation: down alternate infinite ease 0.3s;
+}
+@keyframes down{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+.main .container .suwar .down:hover{
+    color: var(--blue-color);
+}
+.main .container .ayahs,
+.azkar .container .info_content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    margin-top: 50px;
+}
+.azkar .container .info_content{
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+}
+.main .container .ayahs .ayah,
+.date .container .moad{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    border: 2px solid #343a40;
+    cursor: pointer;
+    height: 85px;
+    border-radius: 10px;
+    padding: 10px 20px;  
+    transition: .1s;
+}
+.main .container .ayahs .ayah:hover{
+    border: 2px solid #2ca4ab;
+}
+.main .container .ayahs .ayah .right{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.main .container .ayahs .ayah .right .surah_num{
+    width: 40px;
+    height: 40px;
+    background-color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transform: rotate(45deg);
+}
+.main .container .ayahs .ayah:hover .right .surah_num{
+    background-color: #2ca4ab;
+}
+.main .container .ayahs .ayah .right .surah_num .num{
+    transform: rotate(-45deg);
+    color: white;
+    font-size: 20px;
+}
+.main .container .ayahs .ayah .right .name{
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    margin-right: 20px;
+    margin-top: -2px;
+}
+.main .container .ayahs .ayah .left span{
+    color: #343a40;
+    font-size: 20px;
+}
+.main .container .ayahs .ayah:hover .left span{
+    color: #2ca4ab;
+}
+/* end main */
+/* start date  */
+.date{
+    background-color: var(--gray-dark-color);
+}
+.date .container,
+.azkar .container{
+    padding: 20px 15px;
+}
+.date .container .text .left,
+.azkar .container .text .left{
+    margin-left: 10px;
+    animation: allTime forwards infinite ease-in-out 0.3s;
+    color: white;
+}
+@keyframes allTime{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+.date .container .text,
+.azkar .container .text{
+    background-color: var(--blue-color);
+    padding: 6px 12px;
+    width: fit-content;
+    border-radius: 6px;
+    color: white;
+    
+}
+.date .container .text .name,
+.azkar .container .text .name{
+    font-size: 20px;
+}
+.date .container .moaqet{
+    margin-top: 40px;
+    margin-bottom: 20PX;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px 20px;
+    transition: all .3s;
+}
+.date .container .moaqet .right .name{
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.date .container .moaqet .left span{
+    color: #43494e;
+    font-size: 20px;
+} 
+.date .container .moad:hover .left span{
+    color: #2ca4ab;
+}
+.date .container .moad:hover{
+    border-color: #2ca4ab;
+}
+/* end date  */
+/* start azkar */
+.azkar{
+    background-color: var(--gray-dark-color);
+}
+.azkar .container .info_content .zkr{
+    transition: all 0.3s;
+    padding: 20px 10px;
+    border-radius: 6px;
+    border: 2px solid #343a40;
+}
+.azkar .container .info_content .zkr:hover{
+    border: 2px solid #2ca4ab;
+}
+.azkar .container .zkr .right{
+    display: flex;
+    align-items: center;
+}
+.azkar .container .info_content .zkr .right .name{
+    color: #fff;
+    font-size: 20px;
+}
+.azkar .container .info_content .zkr .right .zkr_num{
+    margin-left: 10px;
+}
+.azkar .container .info_content .zkr .right .zkr_num .num{
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 2px solid #343a40;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    padding: 17px;
+    transition: all 0.3s;
+}
+.azkar .container .info_content .zkr .right .zkr_num .num::before{
+    content: '';
+    position: absolute;
+    left: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent #343a40 transparent transparent;
+    border-width: 7px;
+    border-style: solid;
+    transition: all 0.3s;
+}
+.azkar .container .info_content .zkr:hover .right .zkr_num .num::before{
+    border-color: transparent #2ca4ab transparent transparent;
+}
+.azkar .container .info_content .zkr:hover .right .zkr_num .num{
+    border-color: #2ca4ab;
+}
+.azkar .container .masaa,
+.azkar .container .adaya{
+    margin-top: 50px;
+}
+/* end azkar */
+/* start footer */
+.footer{
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: var(--gray-dark-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0,20%)
+}
+.footer .container .update a{
+    color: #2ca4ab !important;
+}
+.footer .container .up{
+    position: absolute;
+    right: 100px;
+    top: -100px;
+    background-color: #2ca4ab;
+    padding: 10px;
+    width: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.footer .container .whatssapp{
+    position: absolute;
+    right: 100px;
+    top: -50px;
+    background-color: #28c328;
+    padding: 10px;
+    width: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.footer .container .whatssapp a{
+    color: #fff;
+}
+@media (max-width: 990px){
+    .footer .container .up{
+        right: 20px;
+    }
+    .footer .container .whatssapp{
+        right: 20px;
+    }
+}
+/* end footer */
+/* start adds */
+.display{
+    display: none;
+}
+.adds{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.872);
+    width: 100%;
+    min-height: 100vh;
+    /* position: relative; */
+}
+.adds .header{
+    padding: 20px 0;
+    color: #fff;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 50%);
+    display: none;
+}
+.change_reciters {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    width: 380px;
+    height: 100%;
+    z-index: -1000;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.change_reciters.right {
+    right: 0 !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+}
+.adds .change_reciters .nav .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 20px 0px;
+    border-radius: 20px 0px;
+    color: rgb(0 0 0 / 84%);
+}
+.adds .change_reciters .nav .text .text_seng{
+    flex: 1;    
+}
+.adds .change_reciters .nav .text .x_close{
+    color: #737a7a;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.adds .change_reciters .nav .text .x_close:hover{
+    color: rgba(8, 7, 7, 0.964);;
+}
+.adds .change_reciters .nav .box_the_change{
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.adds .change_reciters .nav .box_the_change .content{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.adds .change_reciters .nav .box_the_change .change{
+    display: block;
+    font-weight: 600;
+}
+.adds .change_reciters .nav .box_the_change .change_size .update{
+    background-color: #000000f0;
+    color: #f6f6f6;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    width: 60px;
+    margin-left: 10px;
+}
+.adds .change_reciters .nav .box_the_change .content select{
+    flex: 1;
+    padding: 8px 0;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    outline: none;
+}
+.adds .change_reciters .nav .box_the_change .content select option{
+    font-size: 17px;
+    cursor: pointer;
+}
+.adds .change_reciters .nav .box_the_change .change_size{
+    margin-top: 20px;
+}
+.adds .change_reciters .nav .box_the_change .change_size > span{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 600;
+}
+.adds .change_reciters .nav .box_the_change .change_size .content_size{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.adds .warning{
+    background-color: #eeeeee87;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 20%) ;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(100px);
+    margin-top: 150px;
+    transition: all 0.3s;
+
+}
+.adds .warning button{
+    cursor: pointer;
+    border: 1px solid var(--blue-color);
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #000000f0;
+    color: white;
+    border-radius: 4px;
+}
+.adds .warning.top{
+    opacity: 1;
+    transform: translateY(0);
+}
+.adds .warning h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff0000bd;
+}
+.adds .warning .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.adds .warning .content span{
+    font-size: 18px;
+}
+.adds .warning .content span .num{
+    color: var(--blue-color);
+}
+.adds .change_size.new_update{
+    cursor: no-drop;
+    pointer-events: none;
+    opacity: 0.3;
+}
+.adds .change_reciters .nav .box_the_change .change_size .content_size input{
+    flex: 1;
+    padding: 8px 10px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17px;
+    outline: none;
+}
+.adds .change_reciters .nav .box_the_change .change_size span.text_size{
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #000000f0;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 4px;
+}
+.adds .change_reciters .nav .box_the_change .change_size span.text_size .left{
+    transform: translateY(1px);
+}
+.adds .change_reciters .nav .box_the_change .change_size > span .num{
+    color: rgb(255, 139, 7);
+}
+.adds .header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adds .header .settings{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin-right: auto;
+    position: relative;
+}
+.adds .end{
+    display: block;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+/* start content */
+.adds .content{
+    margin-top: 30px;
+}
+.adds .content .container .start_info .title{
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.adds .content .container .start_info .info_content{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adds .content .container .start_info .info_content .tafasel,
+.adds .content .container .start_info .info_content .load{
+    cursor: pointer;
+    font-size: 18px;
+    color: #8e8e8e;
+}
+.adds .content .container .start_info .info_content .tafasel{
+    animation: slideright forwards 0.3s ease;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes slideright{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.adds .content .container .start_info .info_content .load{
+    color: #2ca4ab;
+    animation: slideleft forwards 0.3s ease;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes slideleft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.adds .content .container .start_info .info_content .tafasel i,
+.adds .content .container .start_info .info_content .load i{
+    margin-right: 5px;
+}
+.adds .content .ayah_text{
+    color: #fff;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.adds .content .ayah_text .text{
+    line-height: 250%;
+    font-weight: 400;
+    font-family: "Amiri", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.adds .content .ayah_text .circle{
+   color: #2ca4ab;
+}
+.adds .content .play_quran{
+    width: 90%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    left: 50%;
+    bottom: 0px;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    display: none;
+}
+.adds::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.7);
+    z-index: 2;
+    display: none;
+}
+.adds.overlay-active{
+    position: relative;
+}
+.adds.overlay-active::before {
+    display: block;
+}
+.adds .overlay-active2{
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.overlay-active2.display{
+    display: block;
+}
+.overlay-active2 .show_tafasel{
+    background-color: #fff;
+    width: 500px;
+    padding: 20px 20px 15px;
+    position: absolute;
+    z-index: 10000000;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+.show_tafasel.add{
+    top: 65px;
+}
+.show_tafasel.add .start .tafsel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Cairo", sans-serif ;
+    color: #464647;
+    font-size: 20px;   
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+.show_tafasel.add .start .tafsel span i{
+    margin-right: 5px;
+}
+.show_tafasel.add .start .tafsel > i{
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.show_tafasel.add .start .tafsel > i:hover{
+    color: black;
+}
+.show_tafasel.add .start .title_tafsel{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.show_tafasel.add .start .title_tafsel .name span{
+    font-size: 17px;
+    font-family: "Cairo", sans-serif ;
+}
+.show_tafasel.add .start .title_tafsel .name span:first-of-type,
+.show_tafasel.add .start .ayaht .ayaht_num span:first-of-type,
+.show_tafasel.add .start .title_tafsel .num span:first-of-type,
+.show_tafasel.add .start .where_it span:first-of-type {
+    color: #1c9ba2;
+}
+.show_tafasel.add .start .ayaht{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 17px;
+    font-family: "Cairo", sans-serif;
+}
+/* end content */
+/* start media quires alone */
+@media (max-width: 500px){
+    .change_reciters{
+        width: 300px;
+    }
+    .adds .change_reciters .nav .box_the_change .change_size .content_size input {
+        width: 120px;
+    }
+}
+/* ******************* */
+/* start main media quires */
+@media (min-width: 769px){
+    .hide .header .list{
+        display: none;
+    }
+    .hide .header .links{
+        display: block;
+    }
+} 
+@media (min-width: 300px) and (max-width: 400px){
+    .overlay-active2 .show_tafasel{
+        width: 350px ;
+    }
+    .show_tafasel.add .start .ayaht,
+    .show_tafasel.add .start .title_tafsel,
+    .name span{
+        font-size: 15px;
+    }
+    .preload img{
+        width: 300px;
+    }
+}
+@media (min-width: 400px) and (max-width: 530px){
+    .overlay-active2 .show_tafasel{
+        width: 400px ;
+    }
+    .preload img{
+        width: 400px;
+    }
+}
+@media (min-width: 530px) and (max-width: 650px){
+    .preload img{
+        width: 530px;
+    }
+}
+@media (min-width: 650px) and (max-width: 800px){
+    .preload img{
+        width: 650px;
+    }
+}
+@media (min-width: 300px) and (max-width: 470px){
+    .info_quran .container span.text{
+        font-size: 35px;
+    }
+    .main .container{
+        padding: 20px 15px;
+    }
+    .info_quran .container span.radio{
+        transform: translateY(40px);
+        padding: 8px;
+    }
+    .main .container .info .text{
+        font-size: 16px;
+    }
+}
+@media (min-width: 470px) and (max-width: 620px){
+    .info_quran .container span.radio{
+        transform: translateY(40px);
+        padding: 10px;
+    }
+    .info_quran .container span.text{
+        font-size: 45px;
+    }
+    .main .container{
+        padding: 20px 15px;
+    }
+}
+@media (min-width: 300px) and (max-width: 700px){
+    .main .container .ayahs{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+@media (min-width: 700px) and (max-width: 990px){
+    .main .container .ayahs .ayah{
+        padding: 10px;
+    }
+    .main .container .ayahs .ayah .right .surah_num{
+        width: 30px;
+        height: 30px;
+    }
+    .main .container .ayahs .ayah .right .surah_num .num{
+        font-size: 15px;
+    }
+    .main .container .ayahs .ayah .right .name{
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    .main .container .ayahs .ayah .left span{
+        font-size: 17px;
+    }
+}
+@media (max-width: 768px){
+    .hide .header .list{
+        cursor: pointer;
+    }
+    .hide .header{
+        padding: 25px;
+    }
+    .hide .header .container::before{
+        bottom: -24px;
+    }
+    .hide .header .container .links{
+        position: absolute;
+        right: 15px;
+        top: 46px;
+        width: calc(100% - 30px);
+        justify-content: space-between;
+        background-color: #000000b0;
+        padding: 10px;
+        display: none;
+        text-align: center;
+    }
+    .hide .header .container .links.goUp{
+        display: block !important;
+    }
+    .hide .header .container .links li{
+        margin-left: 0;
+    }
+    .hide .header .container .links li:not(:last-of-type){
+        margin-bottom: 15px;
+
+    }
+    .azkar .container .info_content .zkr .right .name{
+        font-size: 15px;
+    }
+    .info_quran .container span.radio{
+        margin-right: 20px;
+    }
+    .adds .content .container .start_info .info_content{
+        margin-top: 40px;
+    }
+    .adds .content .container .start_info .title{
+        font-size: 45px;
+    }
+    .header .container .logo,
+    .adds .header .settings{
+        font-size: 17px;
+    }
+} 
+/* end media quires */
+
